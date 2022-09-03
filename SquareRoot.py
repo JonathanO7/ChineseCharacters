@@ -8,14 +8,21 @@ def SquareRootByLongDivision(a):
 	numOfModule = 10**lenOfA/10
 	remainder = a % numOfModule
 	firstDigit = (a - remainder) / numOfModule
-	print(firstDigit)
+	
 
 
-	return firstDigit
+	
 
 #2. Find the largest square that divides into the first number or pair. This will give you the first number in your answer. The first number on the left is 3. The highest square that goes into it is one because 1 x 1 = 1, while 2 x 2 = 4.
-
+	maxSquare = 0
+	for i in range(0,firstDigit):
+		squareRoot = sqrt(i)
+		if squareRoot == firstDigit/i:
+			maxSquare = i
+			
 #3. Subtract the square from the first number or pair. Subtracting the square from the first number will give you a remainder, which will be included in the next step. In this example, 3 - 1 = 2.
+	subtractedFirstDigit = firstDigit - maxSquare
+
 #4. Drop down the next pair. The next number you will work with will be the combination of the subtracted square and the next pair. In this case, they would make a three-digit number. When you bring 61 down, the number you will use for finding the next digit in the square root is 261.
 #5. Multiply the first digit of the square by two. This will be the first digit in the factor for finding the second digit of the square root. In the example, the first digit of the square root is one. 1 x 2 = 2.
 #6. Set up the next factor equation. The equation for the next step is based on the digit from step five and the number from step four. The first factor will be a two-digit number, where the first digit is the number from step five. The equation will look like 2_ x _.
