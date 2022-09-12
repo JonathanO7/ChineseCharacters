@@ -37,7 +37,8 @@ def SquareRootByLongDivision(a):
 	This will be the first digit in the factor for finding the second digit of the square root.
 	In the example, the first digit of the square root is one. 1 x 2 = 2.
 	'''
-	firstDigitx2 = firstDigit*2
+	firstDigitx2 = Jangelo*2
+	
 
 	'''
 	6. Set up the next factor equation(No need to do anything here). 
@@ -59,18 +60,17 @@ def SquareRootByLongDivision(a):
 	for i in range(0,int(combinedNum + 1)):
 		firstFactor = str(firstDigitx2) + str(i)
 		firstFactor = float(firstFactor)
-		firstFactor = int(firstFactor)
-		print(firstFactor)
-		if firstFactor*i == combinedNum:
-			print(firstFactor)
+
+		if int(firstFactor*i) == int(combinedNum):
+
 			#8. Put the number next to the first digit. In this example, the square is 19.
-			finalAnswer = str(firstDigit) + str(i)
+			finalAnswer = str(Jangelo) + str(i)
 			finalAnswer = float(finalAnswer)
-			print(finalAnswer)
+			
 
 			return finalAnswer
 
 	
-a = 361
+a = 121*121
 finalAnswer = SquareRootByLongDivision(a)
 print(finalAnswer)		
