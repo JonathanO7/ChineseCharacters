@@ -59,7 +59,10 @@ def SquareRootByLongDivision(a):
 	for i in range(0,int(combinedNum + 1)):
 		firstFactor = str(firstDigitx2) + str(i)
 		firstFactor = float(firstFactor)
+		firstFactor = int(firstFactor)
+		print(firstFactor)
 		if firstFactor*i == combinedNum:
+			print(firstFactor)
 			#8. Put the number next to the first digit. In this example, the square is 19.
 			finalAnswer = str(firstDigit) + str(i)
 			finalAnswer = float(finalAnswer)
