@@ -1,3 +1,5 @@
+#this algorithm is only suitable for numbers 11 times 11 to 19 times 19. It is not easily expandable so not recommended
+
 def SquareRootByLongDivision(a):
 #1. Separate your square root base into pairs. Starting from the right, group the number into pairs. 
 #In our example, 361 would be 3 61.
@@ -83,4 +85,3 @@ def SquareRootByLongDivision(a):
 a = 5*5
 finalAnswer = SquareRootByLongDivision(a)
 print(finalAnswer)		
-#algorithm only works for a narrow range of numbers
