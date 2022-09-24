@@ -10,27 +10,34 @@ def SquareRootByLongDivision(a):
 	remainder = a % numOfModule
 	firstDigit = (a - remainder) / numOfModule
 	firstDigit = int(firstDigit)
+	print(firstDigit)
+	print(remainder)
+	print("-------------------------------")
 	
-#2. Find the largest number that when squared it is smaller or equal to the first number or pair. This will give you the first number in your answer. The first number on the left is 3. The highest square that goes into it is one because 1 x 1 = 1, while 2 x 2 = 4.
+#2. Find the largest number that when squared it is smaller or equal to the first number or pair. 
+#This will give you the first number in your answer. 
+#The first number on the left is 3. The highest square that goes into it is one because 1 x 1 = 1, while 2 x 2 = 4.
 	listOfSquares = []
-	for i in range(0,firstDigit):
-		if i*i < firstDigit:
+	for i in range(0,firstDigit + 1):
+		if i*i <= firstDigit + 0.0001:
 			listOfSquares.append(i)
 	Jangelo = max(listOfSquares) #Jangelo, the largest number that when squared it is smaller or equal to the first number or pair
-
+	print(Jangelo)
 
 	#3. Subtract the square from the first number or pair. 
 	#Subtracting the square from the first number will give you a remainder, 
 	#which will be included in the next step. In this example, 3 - 1 = 2.
 	subtractedFirstDigit = firstDigit - Jangelo
-
+	print(subtractedFirstDigit)
+	print("-------------------------------")
 	#4. Drop down the next pair. 
 	#The next number you will work with will be the combination of the subtracted square and the next pair.
 	#In this case, they would make a three-digit number. 
 	#When you bring 61 down, the number you will use for finding the next digit in the square root is 261.
 	newNumber = str(subtractedFirstDigit) + str(remainder)
 	combinedNum = float(newNumber)
-	
+	print(combinedNum)
+	print("-------------------------------")
 
 	'''
 	5. Multiply the first digit of the square by two. 
@@ -70,7 +77,10 @@ def SquareRootByLongDivision(a):
 
 			return finalAnswer
 
-	
-a = 121*121
+#not working num: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 400, 441
+#working num: (121, 144, 169, 196, 225, 256, 289, 324, 361) 11 to 19 squared
+
+a = 5*5
 finalAnswer = SquareRootByLongDivision(a)
 print(finalAnswer)		
+#algorithm only works for a narrow range of numbers
