@@ -57,8 +57,6 @@ def cbrt(a):
 		error = abs(initialguess**3 - a)
 	
 		if error < threshold:
-			if -1 < a < 0:
-				initialguess = initialguess*-1
 			return initialguess
 
 
